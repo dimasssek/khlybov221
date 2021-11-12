@@ -34,3 +34,15 @@ table_even {
 body footer {
     background-color: #ede13d;
 }
+
+#mainer 
+{
+	background-color:  #3B0101;
+	display: flex;
+	flex-direction: column;
+	margin: 0 auto;
+	margin-top: 15px;
+	max-width: 960px;
+	border-bottom: 5px solid black;
+	
+}
