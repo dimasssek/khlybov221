@@ -1,53 +1,194 @@
 <!DOCTYPE html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="4.css" type="text/css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <title>Задание 4</title>
-</head>
-<body >
-    <div class="body">
-        <div id="calc">
-            <form class="container row">
-                <div class="form-group">
-                    <label>Калькулятор стоимости</label>
-
-                        <select name="myselect" class="form-control">
-                            <option value="1" selected>Товар1</option>
-                            <option value="2">Товар2</option>
-                            <option value="3">Товар3</option>
-                        </select> 
-
-                        <div class="pis d-none" id="myradios">
-
-                            <div class="custom-control custom-radio">
-                                <input type="radio" class="custom-control-input" id="radio1" name="myradio" value="r1" checked>
-                                <label class="custom-control-label" for="radio1">Cвойство1</label>
-                            </div>
-                            
-                            <div class="custom-control custom-radio">
-                                <input type="radio" class="custom-control-input" id="radio2" name="myradio" value="r2">
-                                <label class="custom-control-label" for="radio2">Свойство2</label>
-                            </div>
-                            
-                            <div class="custom-control custom-radio">
-                                <input type="radio" class="custom-control-input" id="radio3" name="myradio" value="r3">
-                                <label class="custom-control-label" for="radio3">Свойство3</label>
-                            </div>
-                    
-                        </div>
-                        <div id="mycheck" class="d-none">
-                            <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="check" name="mycheck">
-                                <label class="custom-control-label" for="check">Свойство4</label>
-                            </div>
-                        </div>
-                    <input name="count" type="text" class="form-control" id="count" placeholder="Введите количество">         
-                </div>
-              
-            </form>   
-            Итого: 
-        <div class="result" id="result"></div>
-     </div> 
+<html lang="ru">
+     
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <title>Задание №4</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  </head>
+  <header>
+    <div class="container-fluid">
+        <div class="row d-flex text-center px-0">
+            <div class="col-9 order-2 mt-3 px-0">
+                <main>
+                    <h1>Лабораторная 4</h1>
+                </main>
+            </div>
+            <div class="col-3 order-1 mt-3 px-2">
+                <aside>
+                    <img src="https://i.pinimg.com/originals/a4/df/23/a4df23d17bb96a4e07e0c0f1c660a942.jpg" width="200" height="200" alt="logo" />
+                </aside>
+            </div>
+        </div>
     </div>
+</header>
+
+  <body>
+    <nav>
+        <div class="container-fluid">
+            <div class="row d-flex text-center">
+                <div id="link_1" class="col px-0 ml-2 mr-1">
+                    <a href="https://example.com" class="text-dark" title="Go to example.com">Go to example.com</a>
+                </div>
+                <div id="link_2" class="col px-0 mx-auto">
+                    <a href="https://example.com" class="text-dark" title="Go to example.com">Go to example.com</a>
+                </div>
+                <div id="link_3" class="col px-0 ml-1 mr-2">
+                    <a href="https://example.com" class="text-dark" title="Go to example.com">Go to example.com</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div id="content" class="container-fluid">
+        <div class="row d-flex px-2">
+            <a id=“list_of_links”></a>
+            <div id="bf_list" class="col-12 mx-auto mb-md-3 mb-2 order-1 px-2">
+    <ol>
+      <li><a href="http://example.com/">абсолютную гиперссылку на главную страницу сайта example.com</a>;</li>
+      <li>абсолютную на главную сайта <a href="http://example.com/">example.com</a> в протоколе https;</li>
+      <li><a href="ftp://example.com/file.txt">ссылку на файл на сервере FTP без авторизации</a></li>
+      <li><a href="ftp://user:password@example.com/file.txt">ссылку на файл на сервере FTP с авторизацией;</a></li>
+      <li>ссылку на фрагмент страницы некоторого сайта (<a href="https://ru.wikipedia.org/wiki/Есенин,_Сергей_Александрович#Биография">Биография Есенина</a>)</li>
+      <li><a href="#form">Ссылка на анкету</a></li>
+      <li><a href="https://ru.wikipedia.org/w/index.php?title=Есенин,_Сергей_Александрович&stable=0&redirect=no">ссылку с двумя параметрами в URL</a></li>
+      <li><p>список ссылок основной навигации сайта с подписями title;</p>
+      <h3>Марки машин:</h3>
+      <ul>
+        <li><a href="https://www.porsche.com/russia/" title="Официальный сайт Porsche">Porsche</a></li>
+        <li><a href="https://www.mercedes-benz.ru/?group=all&subgroup=see-all&view=BODYTYPE" title="Официальный сайт Mercedes">Mercedes</a></li>
+        <li><a href="https://www.bmw.ru/ru/index.html" title="Официальный сайт BMW">BMW</a></li>
+      </ul></li>
+      <li><a>ссылку без href;</a></li>
+      <li><a href ="">ссылку с пустым href;</a></li>
+      <li>Главная страница <a href="https://www.gazprom.ru/" rel="nofollow">"Газпром" </a></li>
+      <li><a href="https://www.gazprom.ru/"><noindex>Главная страница "Газпром" </noindex></a></li>
+      <li><p>контекстную в тексте абзаца
+          <br>Росси́я или Росси́йская Федера́ция (РФ), — государство в <a href="https://ru.wikipedia.org/wiki/Восточная_Европа">Восточной Европе</a>
+         и <a href="https://ru.wikipedia.org/wiki/Северная_Азия">Северной Азии</a>.
+        <br> Территория России в её <a href="https://ru.wikipedia.org/wiki/Конституция_Российской_Федерации">конституционных границах</a> составляет 17 125 191 км²;
+         <br>население страны (в пределах её заявленной территории) составляет 146 171 015 чел. (2021).
+         <br> Занимает <a href="https://ru.wikipedia.org/wiki/Список_государств_и_зависимых_территорий_по_площади">первое место в мире по территории</a>, шестое — по объёму ВВП по ППС, 
+         <br>и девятое — <a href="https://ru.wikipedia.org/wiki/Список_государств_и_зависимых_территорий_по_населению">по численности населения.</a></p></li>
+         <li>Ссылка-изображение:
+            <br>
+             <a href="https://www.porsche.com/russia/"><img alt="Автомобиль" src="porsche911.jpg" height="412" width="622"></a></li>
+        <li>Ссылки из прямоугольных и круглых областей картинки:
+            <br>
+            <img alt="Рэперы" src="snoopdog.jpg" height="288" width="509" usemap="#click">
+            <map name="click">
+                <area alt="Доктор Дре" shape="rect" coords="61,239,214,18" href="https://ru.wikipedia.org/wiki/Доктор_Дре"
+                title="Доктор Дре">
+                <area alt="Снуп Дог" shape="circle" coords="387,40,26" href="https://ru.wikipedia.org/wiki/Snoop_Dogg"
+                title="Snoop_Dogg">
+                <area alt="Pedr0nik" shape="rect" coords="308,215,344,198" href="https://steamcommunity.com/id/XXXPedroCarboneXXX"
+                title="Pedr0nik">
+            </map>
+        </li>
+        <li><a href="./porsche911.jpg">Относительная ссылка в текущем катологе</a></li>
+        <li><a href="./about/gaz.jpg">относительную на страницу в каталоге about; </a></li>
+        <li><a href="../porshe.jpg"> относительную на страницу в каталоге уровнем выше текущего;</a></li>
+        <li><a href="../../galerei.jpg">относительную на страницу в каталоге двумя уровнями выше; </a></li>
+        <li><a href="./index.html">Сокращенная сылка на главную страницу</a></li>
+        <li><a href="index.html">сокращенную ссылку на внутреннюю страницу</a></li>
+    </ol>
+  </div>
+  <div class="col-12 align-self-center text-center mb-md-3 mb-2 order-md-2 order-3 px-0">
+    <table>
+        <tr class="table_odd">
+            <th>Колонка 1</th>
+            <th>Колонка 2</th>
+            <th>Колонка 3</th>
+            <th>Колонка 4</th>
+        </tr>
+        <tr class="table_even">
+            <td colspan="2">Ячейка 11 + 12</td>
+            <td colspan="2">Ячейка 13 + 14</td>
+        </tr>
+        <tr class="table_odd">
+            <td>Ячейка 21</td>
+            <td colspan="2">Ячейка 22 + 23</td>
+            <td>Ячейка 24</td>
+        </tr>
+        <tr class="table_even">
+            <td colspan="4">Ячейка 31 + 32 + 33 + 34</td>
+        </tr>
+        <tr class="table_odd">
+            <td>Ячейка 41</td>
+            <td>Ячейка 42</td>
+            <td>Ячейка 43</td>
+            <td>Ячейка 44</td>
+        </tr>
+        <tr class="table_even">
+            <td>Ячейка 51</td>
+            <td colspan="2">Ячейка 52 + 53 </td>
+            <td>Ячейка 54 </td>
+        </tr>
+    </table>
+</div>
+    <div id="superform" class="col mx-auto mb-md-2 mb-1 text-center order-md-3 order-2 pb-1">
+            <b>Анкета для знакомства)</b>
+            <form action="/"
+                  method="POST"> 
+
+      <p>
+        <b> Ваше имя: </b><br>
+        <input type = "text" name = "name">
+        </p>
+        <p>
+            <b> Электронная почта: </b><br>
+            <input type = "email" name = "email">
+        </p>
+        <p>
+            <b> Дата рождения: </b><br>
+            <input type = "date" name = "birthdate">
+        </p>
+        <p>
+            <b> Пол </b><br>
+            <input type = "radio" name = "sex" value = "male">Мужской<br>
+            <input type = "radio" name = "sex" value = "female">Женский
+        </p>
+        <p>
+            <b> Количество конечностей </b><br>
+            <input type = "radio" name = "limbs" value = "2">2<br>
+            <input type = "radio" name = "limbs" value = "3">3<br>
+            <input type = "radio" name = "limbs" value = "4">4<br>
+            <input type = "radio" name = "limbs" value = "5">5
+        </p>
+        <p>
+            <b> Сверхспособности: </b><br>
+            <label><select name="field4"
+              multiple="multiple">
+              <option value="val1">Бессмертие</option>
+              <option value="val2">Прохождение скозь стены</option>
+              <option value="val3" selected="selected">Левитация</option>
+            </select>
+          </label>
+        </p>
+        <p>
+            <b> Биография </b><br>
+            <textarea id = "Биография" wrap = "hard" name = "biography" rows = "15" cols = "80" placeholder = "Введите вашу биографию"></textarea>
+        </p>
+        <p>
+            <b> Ознакомлен c условиями </b><br>
+            <input type = "checkbox" name = "approval" value="agree">
+        </p>
+        <p>
+            <input type = "submit">
+        </p>
+    </form>
+  
+</div>
+</div>
+    </div>
+  <div class="col-12 order-4 px-2">
+        <footer>
+            <h5>© KKD  </h5>
+        </footer>
+    </div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+  </body>
+  </html>  
