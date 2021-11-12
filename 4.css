@@ -1,20 +1,36 @@
-@font-face {
-    font-family: SFProDisplay-Regular; 
-    src: url(addition/SFProDisplay-Regular.ttf); 
+#link_1, #link_2, #link_3 {
+    background-color: #c7ca1d;
+    font-family: fantasy;
 }
-    
-.body{
-    font-family: SFProDisplay-Regular;  
-    color:black;
-    margin-left: 1%;
-    margin-top: 1%;
-  }
-  form{
-      font-size: 24px; 
-  }
-  #calculateResult{
-      margin-top: 10px;
-  }
-  #count{
-      margin-top: 10px;
-  }
+
+#bf_list, #content table, #superform {
+    background-color: #a0a0a0;
+    font-family: cursive;
+}
+
+header main, header aside {
+    background-color: #ce0303;
+    font-family: fantasy;
+    vertical-align: middle;
+    height: 100%;
+}
+
+table td, th {
+    border: 1px solid rgb(192, 1, 1);
+}
+
+table {
+    width: 100%;
+}
+
+table_odd {
+    background-color: #fff0f5;
+}
+
+table_even {
+    background-color: #37B0BD;
+}
+
+body footer {
+    background-color: #ede13d;
+}
