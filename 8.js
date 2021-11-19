@@ -26,7 +26,7 @@ $(function() {
 $(".subscribe-form").submit(function() {
     var th = $(this);
     $.ajax({
-      url: "https://api.slapform.com/agorozhanin23@gmail.com", 
+      url: "https://api.slapform.com/khdfkrr@gmail.com", 
       dataType: "json",
       method: 'POST',
       data: th.serialize()
